@@ -1,155 +1,89 @@
 ---
 name: maoxuan-research-ops
-description: Use this skill when the user wants research planning, vibe-coding execution, anti-procrastination task decomposition, iterative self-optimization, or evidence-driven reprioritization. It turns large, vague goals into a protracted but disciplined campaign: start before perfect, decompose into small battles, identify the primary contradiction, concentrate effort on the decisive point, adapt truthfully to current results, pivot quickly when a path is not worth forcing, and maintain strict time blocks for execution and review. 当用户需要科研规划、vibe-coding执行、反拖延拆解、迭代自优化或基于证据重排优先级时使用；将宏大而模糊目标转化为持久、纪律化推进：先开工后完美、任务分战役、抓主要矛盾、集中优势兵力、根据结果实事求是调整、久攻不克迅速转移阵地、并严格执行时间块。
+description: 当用户需要科研规划、vibe-coding执行、反拖延任务拆解、迭代自优化或证据驱动重排优先级时使用。将宏大目标转化为持久、纪律化推进：先开工后完美、分战役拆解、抓主要矛盾、集中优势兵力、依据结果实事求是调整、久攻不克迅速转移阵地，并严格执行时间块。
 ---
 
-# MaoXuan Research Ops / 毛选科研作战技能
+# 毛选科研作战技能
 
-A planning-and-execution skill for research, coding, and long-horizon project work.  
-这是一个用于科研、编码与长期项目推进的“规划 + 执行”技能。
+这是一个用于科研、编码和长期项目推进的规划与执行技能。
 
-## Core stance / 核心立场
+## 语言规则
 
-- Start before perfect. / 杜绝完美主义，先开工。  
-- Prepare for protracted progress. / 做持久战准备，不做速胜论和悲观论奴隶。  
-- Diagnose procrastination clinically. / 对拖延做理性诊断，不做道德化懊悔。  
-- Shift battlefield when needed. / 久攻不克，迅速转移阵地。  
-- Enforce strict time blocks. / 严格时间纪律，到点就位。  
-- Seek truth from facts. / 实事求是，按结果修正计划。  
-- Distinguish primary vs. secondary contradictions. / 分清主次矛盾。  
-- Concentrate effort on decisive bottleneck. / 集中优势兵力打决定点。
+- 默认使用与用户提问相同的语言输出。
+- 若用户使用中文，输出中文。
+- 若用户使用英文，输出英文。
+- 若用户未明确语言，优先使用用户最近一条消息的主要语言。
 
-## Trigger conditions / 触发条件
+## 触发条件
 
-Use this skill when user has one or more of the following:
+当用户出现以下一种或多种需求时启用本技能：
 
-1. A large goal but no clean starting point.  
-   有宏大目标但不知道第一步做什么。
-2. A rough todo list needing executable sequencing.  
-   有粗略 todo list，需要变成可执行序列。
-3. Procrastination, over-planning, repeated context switching.  
-   存在拖延、过度规划、频繁切换。
-4. Need dynamic re-planning from logs/tests/partial outputs.  
-   需要根据日志、测试、实验结果动态重规划。
-5. Need prioritization by primary contradiction.  
-   需要抓主要矛盾而不是平均用力。
+1. 有宏大目标但没有清晰起点。
+2. 有粗略 todo list，需要转成可执行序列。
+3. 出现拖延、过度规划、频繁切换。
+4. 需要基于日志、测试、实验结果进行动态重规划。
+5. 需要识别主要矛盾而非平均用力。
 
-## Operating procedure / 作战流程
+## 核心原则
 
-### Phase A — Situation report / 态势侦察
+1. **先开工，后完美**：15–30 分钟内必须有可执行开局动作。
+2. **持久战节奏**：按阶段推进，不追求一轮速胜。
+3. **拖延做诊断，不做道德批判**：记录事实、定位原因、制定干预。
+4. **久攻不克，转移阵地**：当证据显示路径低效时快速换打法。
+5. **严格时间纪律**：一块一目标，一目标一产物，一产物一验证。
+6. **实事求是**：计划服从结果，不服从先验想象。
+7. **主次矛盾**：每轮明确一个主要矛盾，次要矛盾维持最低投入。
+8. **集中兵力**：优先打决定点，避免多线摊薄。
 
-Extract/infer:
-- strategic goal / 战略目标
-- current assets / 当前已有产物
-- blockers / 关键阻塞
-- time budget / 时间预算
-- evidence / 已有证据（日志、实验、报错、评审意见）
+## 作战流程（A-H）
 
-If information is incomplete, proceed with best grounded estimate.
-若信息不全，先基于现有证据给出最稳妥推进方案。
+### A. 态势侦察
+提取：战略目标、现有产物、阻塞、时间预算、依赖、已有证据。
 
-### Phase B — Objective ladder / 目标梯度
+### B. 目标梯度
+明确三层目标：战略目标（终局）、战役目标（阶段）、战术目标（立即可执行）。
 
-Define 3 levels:
-1. Strategic objective / 战略目标（终局）
-2. Campaign objective / 战役目标（阶段）
-3. Tactical objective / 战术目标（可立刻执行）
+### C. 主要矛盾判定
+说明当前决定性瓶颈、为何是主要矛盾、证据依据。
 
-Tactical objective must be startable within 15–30 minutes.
-战术目标必须能在 15–30 分钟内开工。
+### D. 任务肢解
+拆为小颗粒、可观察、可验证、依赖有序的任务单元。
 
-### Phase C — Primary contradiction / 主要矛盾判定
+### E. 本轮战斗计划
+仅定义本轮：目标、产物、验证标准、止损条件、转移阵地条件。
 
-Explicitly state:
-- current decisive bottleneck / 当前决定性瓶颈
-- why it is primary / 为何它是主要矛盾
-- evidence backing it / 证据是什么
+### F. 时间块执行
+执行时不随意扩范围，不追支线；通过运行/写作/检查/测量保持与现实接触。
 
-If no evidence, next move is evidence collection.
-若无证据，下一步先取证。
+### G. 复盘重分类
+每轮输出后标记：推进 / 部分推进 / 僵持 / 阵地错误 / 信息不足，并立刻更新计划。
 
-### Phase D — Split into attackable units / 任务肢解
+### H. 拖延病理复盘
+按结构记录：回避内容、真实原因、更小开局动作、下轮修正。
 
-Create units that are:
-- small / 小颗粒度
-- observable / 可观察
-- testable / 可验证
-- dependency-ordered / 依赖有序
+## 必须输出结构
 
-Avoid vague tasks like “finish everything”.
-避免“把整个方法做完”这类伪拆解。
+在适用时优先按以下标题组织回答：
 
-### Phase E — Current battle plan / 本轮战斗计划
+1. 战略目标
+2. 当前主要矛盾
+3. 次要矛盾
+4. 当前战役目标
+5. 本轮突击任务
+6. 验证标准
+7. 转移阵地条件
+8. 复盘
 
-For this round only define:
-- target / 目标
-- expected artifact / 产物
-- verification / 验证标准
-- stop condition / 止损条件
-- pivot condition / 转移阵地条件
+模板文件：`templates/battle-plan-template.md`。
 
-### Phase F — Execute in time blocks / 时间块执行
+## 不可谈判规则
 
-Rule set:
-- one block, one objective / 一块一目标
-- one objective, one artifact / 一目标一产物
-- one artifact, one check / 一产物一验证
-
-Recommended blocks:
-- 25–45 min tactical push
-- 5–10 min checkpoint
-- 60–120 min only for well-shaped tasks
-
-### Phase G — Review and reclassify / 复盘重分类
-
-After each block, classify result as:
-- advance / 推进
-- partial advance / 部分推进
-- stalemate / 僵持
-- wrong battlefield / 阵地错误
-- insufficient information / 信息不足
-
-Then update plan immediately.
-然后立刻更新计划。
-
-### Phase H — Clinical anti-procrastination / 拖延病理复盘
-
-Use this structure:
-- what was avoided / 回避了什么
-- actual cause / 真正原因
-- smaller opening move / 更小可执行开局动作
-- change for next round / 下一轮如何调整
-
-No self-blame language.
-禁止自责话术，只做诊断与修正。
-
-## Required response pattern / 输出格式
-
-Always prefer this structure when applicable:
-
-1. **战略目标 / Strategic Goal**
-2. **当前主要矛盾 / Primary Contradiction**
-3. **次要矛盾 / Secondary Contradictions**
-4. **当前战役目标 / Current Campaign Objective**
-5. **本轮突击任务 / Immediate Attack Tasks**
-6. **验证标准 / Verification Criteria**
-7. **转移阵地条件 / Pivot Conditions**
-8. **复盘 / Review**
-
-Template file: `templates/battle-plan-template.md`.
-
-## Non-negotiables / 不可谈判规则
-
-- Never delay opening move for perfection.
-- Never treat all tasks as equally urgent.
-- Never keep all fronts active simultaneously.
-- Never hide uncertainty behind confident prose.
-- Never moralize procrastination.
-- Never stay due to sunk cost.
-- Always update with evidence.
-- Always name primary contradiction.
-- Always make next move observable.
-
-## Example reference / 示例参考
-
-See `examples/diffusion-vlm-integration.md` for a concrete application.
+- 不允许以完美主义拖延开局。
+- 不允许把所有任务都当同等优先级。
+- 不允许长期多线并行导致兵力分散。
+- 不允许用确定语气掩盖不确定性。
+- 不允许用羞耻叙事回应拖延。
+- 不允许因为沉没成本而死守错误阵地。
+- 必须基于真实结果更新计划。
+- 必须明确命名当前主要矛盾。
+- 下一步必须可观察、可执行。
